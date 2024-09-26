@@ -1,0 +1,187 @@
+*{ /* Cuando nosotros ponemos estilos a un asterisco significa que le estamoos poniendo estilos a toda la pagina */
+    padding: 0; /*Elimina el relleno */
+    margin: 0;   /*Elimina los margenes*/
+}
+
+body{
+    background-color: white;  /*El color del fondo*/
+    font-family: sans-serif;  /* Tipo de tipografía*/
+    font-weight: bold; /* Para hacer mas negritas las letras del header */
+}
+
+header nav {    /*Diseño de la barra de navegación */
+    display: flex; /* La pantalla va a ser flexible */
+    flex-direction: row; /* fila horizontal (renglon) a la derecha*/
+    justify-content: space-between;  /* justificame el texto*/
+    align-items: center; /*Alineame todos los items (elementos) al centro*/
+    width: 98vw;
+    height: 80px;
+    font-size: 16px; /*tamaño de la fuente*/
+    padding: 0px 16px;
+    position: fixed;/*Fija la barra de navegación en la parte superior de la pantalla, incluso cuando se desplaza la página*/
+    z-index: 1; /*Asegura que la barra esté por encima de otros elementos en la página.*/
+    background-color: white;
+}
+
+/*Estilos del menú del lado izquierdo*/
+header nav img#pinterest-icon{ /*Para ajustar el tamaño de la imagen (pinterest icon es el nombre de la imagen */
+    width: 35px;  /*ancho */
+    height: 35px; /* largo*/
+    padding: 4px;  /*área*/
+}
+
+ header nav #pinterest-icon:hover{ /*hover hace que se sombree algo al pasar el mouse , en este caso en el icono*/
+    background-color: #e9e9e9;      /* es el color gris que pone el hover*/
+    border-radius: 150px;   /* La propiedad que redondea las esquinas dando un aspecto de círculo*/
+ }
+
+    .first-list{  /* diseño de la lista*/
+        display: flex;  
+    }
+
+    .first-list a{
+        text-decoration: none;  /* quitar la raya que salia abajo de inicio , explorar etc (Elimina el subrayado en los enlaces.)*/
+        color: black; /* color de la fuente*/
+    }
+
+    .first-list li{ /* quitarle los puntitos a la lista*/
+        list-style: none; /*Elimina los puntos o viñetas que vienen por defecto en las listas.*/
+        padding: 0px 12px;  
+    }
+
+ #inicio{ /*Para hacer la forma redondeada y de color negro de la palabra "incio"*/
+    background-color: black;
+    color: white;  /* color de la fuente*/
+    padding: 14px 12px;
+    border-radius: 25px;
+}
+
+/*Estilos de la barra de busqueda*/
+.search{ /*barra de busqueda*/
+    flex-grow: 1;  /*Permite que la barra crezca para ocupar todo el espacio disponible.*/
+    height: 48px;
+    background-color: #e9e9e9;
+    border-radius: 30px;
+}
+
+.search:hover{
+    background-color: #e1e1e1;
+}
+
+.search:focus-within{  /*Centrarse al centro*/
+    border: 4px solid #7fc1ff;
+}
+
+.barra{
+    display: flex;
+    align-items: center;
+    height: 48px;
+}
+
+#lupa{
+    padding: 13px;
+    color: #767676;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.barra input{
+    border: none;  /*quitar el borde negro de la barra de busqúeda*/
+    background-color: inherit; /*inherit hereda el color de fondo de su contenedor*/
+    outline: none; /*Elimina el contorno por defecto cuando haces clic.*/
+    padding: 0px 8px 0px 0px; /* Cada valor es un lado , comenzando por las manecillas del reloj */
+    font-size: 16px;
+    flex-grow: 1; /*Permite que el campo de texto crezca.*/
+}
+
+.right-items span{         /*iconos a la derecha*/
+    padding: 8px; /* Espacio alrededor de los iconos*/
+    color: #767676;
+    font-size: 28px;
+}
+
+.right-items span:hover{
+    background-color: #e9e9e9;
+    border-radius: 150px;
+    cursor: pointer;       /*actúa como un link muerto*/
+}
+
+/* Estilos Main (cards) */
+.contenido{
+    position: absolute;
+    margin-top: 80px;
+    padding-right: 5px;
+}
+
+.imagenes{
+    columns: 5 240px;
+    margin: auto;
+}
+
+.imagenes .card-image{
+    position: relative;
+    padding: 6px;
+}
+
+.imagenes .card-image img{
+    min-width: 240px;
+    max-width: 240px; /*min-width y max-width: Controla el tamaño de las imágenes, que deben ser de 240px de ancho.*/
+    height: auto;  /*Mantener la proporcion de las imagenes*/ 
+    border-radius: 15px;
+}
+ /* se da el sombreado de la imagen */
+.card-image:hover >:first-child{
+    filter: brightness(60%);
+}
+
+.card-image:hover  > *{
+    visibility: visible;
+    display: inline;
+}
+
+button{
+    position: absolute;
+    left: 57%;
+    top: 5%;
+    padding: 13px 15px;
+    background-color: #e60023;
+    border-radius: 30px;
+    border: none;
+    visibility: hidden;
+    display: none;  /*visibility: hidden; y display: none;: El botón está oculto hasta que la imagen se sobrevuela con el ratón.*/
+}
+
+.imagenes .card-image button a{ 
+    text-decoration: none;
+    color:white;
+    font-size: 16px;
+    font-weight: bold ;
+}
+
+.oculto-1{
+    position: absolute;
+    left: 60%;
+    bottom: 8%;
+    background-color: white;
+    font-size: 30px;
+    border-radius: 50px;
+    color: black;
+    font-weight: bold;
+    padding: 4px;
+    visibility: hidden;
+    display: none;
+}
+
+.oculto-2{
+    position: absolute;
+    left: 78%;
+    bottom: 8%;
+    background-color: white;
+    font-size: 30px;
+    border-radius: 50px;
+    color: black;
+    font-weight: bold;
+    padding: 4px;
+    visibility: hidden;
+    display: none;
+}
